@@ -60,4 +60,6 @@ jobs:
         run: |
           mike deploy ${{ steps.cversion.outputs.version }} latest -u
           mike set-default ${{ steps.cversion.outputs.version }}
+          git checkout gh-pages
+          git push origin gh-pages
       
